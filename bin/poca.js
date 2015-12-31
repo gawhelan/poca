@@ -41,7 +41,11 @@ if (!command) {
 }
 
 try {
-    script.run(collection, command);
+    script.run({
+        collection: collection,
+        command: command,
+        args: app.args.slice(2),
+    });
 } catch (err) {
     log.error(err);
     process.exit(1);

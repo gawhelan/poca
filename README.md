@@ -84,3 +84,14 @@ or:
 
 The required interpreter needs to already be installed on your local
 machine in order for the script to be executed successfully.
+
+#### Arguments
+
+Any arguments that appear after the script name are passed as
+arguments to the script when it is executed. So for example:
+
+    $ poca test say-hello Joe
+
+Will fetch the `say-hello` script from the `test` collection and
+execute it, passing the value `Joe` as the first argument to the
+script.
