@@ -9,6 +9,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/gawhelan/poca.git"
+  },
   "author": "Graham Whelan <gawhelan@gmail.com>",
   "license": "ISC",
   "dependencies": {
