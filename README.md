@@ -13,13 +13,22 @@ the *name* of the script. For example:
 The above command will execute the `init` script from the `wordpress`
 collection.
 
+## Installation
+
+Poca is written in [Node.js](https://nodejs.org/) so you need to
+have node installed first. Then you should use `npm` to install Poca
+globally.
+
+    $ npm install -g poca
+
 ## Configuration
 
 Configuration details for `poca` are defined in your local `.poca`
 file that is located in your home directory. If this file does not
-exist you need to create it. At a minimum, this file needs to define
-the set of *collections* available. See the `Collections` section
-below for details on how to define collections.
+exist you need to create it. This file should to be in the YAML
+format and at a minimum it needs to define the set of *collections*
+available. See the `Collections` section below for details on how to
+define collections.
 
 ## Collections
 
@@ -36,20 +45,20 @@ collections: `wordpress` and `mysql`.
 
     ---
     collections:
-      - name: wordpress
-        url: https://github.com/joebloggs/poca-scripts/wordpress/
+      - name: test
+        url: https://github.com/gawhelan/poca-scripts/raw/master/test/
       - name: mysql
-        url: https://github.com/joebloggs/poca-scripts/mysql/
+        url: https://github.com/gawhelan/poca-scripts/raw/master/mysql/
 
 With the above configuration file you can execute scripts within
 one of the defined collections as follows:
 
-    $ poca wordpress init
+    $ poca test python
 
 The above command will combine the collection's `url` property with
 the script name `init` and try to fetch the file located at the url
-`https://github.com/joebloggs/poca-scripts/wordpress/init`. If the
-file is successfully retrieved from the server, it is saved to a
+`https://github.com/gawhelan/poca-scripts/raw/master/test/init`. If
+the file is successfully retrieved from the server, it is saved to a
 temporary location and executed.
 
 ## Scripts
@@ -72,3 +81,6 @@ or:
 
     #!/usr/bin/env bash
     echo "This is a Bash script."
+
+The required interpreter needs to already be installed on your local
+machine in order for the script to be executed successfully.
