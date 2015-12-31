@@ -45,21 +45,21 @@ collections: `wordpress` and `mysql`.
 
     ---
     collections:
-      - name: test
-        url: https://github.com/gawhelan/poca-scripts/raw/master/test/
+      - name: example
+        url: https://github.com/gawhelan/poca-scripts/raw/master/example/
       - name: mysql
         url: https://github.com/gawhelan/poca-scripts/raw/master/mysql/
 
 With the above configuration file you can execute scripts within
 one of the defined collections as follows:
 
-    $ poca test python
+    $ poca example python
 
 The above command will combine the collection's `url` property with
 the script name `init` and try to fetch the file located at the url
-`https://github.com/gawhelan/poca-scripts/raw/master/test/init`. If
-the file is successfully retrieved from the server, it is saved to a
-temporary location and executed.
+`https://github.com/gawhelan/poca-scripts/raw/master/example/init`.
+If the file is successfully retrieved from the server, it is saved
+to a temporary location and executed.
 
 ## Scripts
 
@@ -90,8 +90,8 @@ machine in order for the script to be executed successfully.
 Any arguments that appear after the script name are passed as
 arguments to the script when it is executed. So for example:
 
-    $ poca test say-hello Joe
+    $ poca example say-hello Joe
 
-Will fetch the `say-hello` script from the `test` collection and
+Will fetch the `say-hello` script from the `example` collection and
 execute it, passing the value `Joe` as the first argument to the
 script.
