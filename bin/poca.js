@@ -5,7 +5,7 @@ var config = require('../lib/config');
 var script = require('../lib/script');
 
 var app, configData;
-var colName, collection, command;
+var colName, scriptName, collection;
 
 try {
     configData = config.load();
@@ -18,7 +18,7 @@ try {
 app = require('commander');
 
 app.version(require('../package.json').version);
-app.arguments('<collection> <command>');
+app.arguments('<collection> <script>');
 app.parse(process.argv);
 
 
@@ -34,16 +34,16 @@ if (!collection) {
     process.exit(1);
 }
 
-command = app.args[1];
-if (!command) {
-    log.error('No command specified.');
+scriptName = app.args[1];
+if (!scriptName) {
+    log.error('No script specified.');
     app.help();
 }
 
 try {
     script.run({
         collection: collection,
-        command: command,
+        script: scriptName,
         args: app.args.slice(2),
     });
 } catch (err) {
