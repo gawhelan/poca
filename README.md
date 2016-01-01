@@ -125,3 +125,8 @@ variables are also available to the script:
   - `POCA_COLLECTION`: the name of the collection that the script is
                     contained in.
   - `POCA_SCRIPT`: the name of the script being executed.
+
+## Windows Support
+
+Poca supports Windows but requires a Unix-like environment such as
+MSYS to be installed.
