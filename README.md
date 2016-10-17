@@ -60,7 +60,7 @@ following properties:
   - `url`: the base URL to use for fetching scripts.
 
 The following is an example `.poca` file that defines two
-collections: `wordpress` and `mysql`.
+collections: `example` and `mysql`.
 
     ---
     collections:
