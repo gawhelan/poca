@@ -1,11 +1,13 @@
 #!/usr/bin/env node
 
-var log = require('../lib/log');
-var config = require('../lib/config');
-var script = require('../lib/script');
+'use strict';
 
-var app, configData;
-var colName, scriptName, collection;
+const log = require('../lib/log');
+const config = require('../lib/config');
+const script = require('../lib/script');
+
+let app, configData;
+let colName, scriptName, collection;
 
 try {
     configData = config.load();
@@ -50,4 +52,3 @@ try {
     log.error(err);
     process.exit(1);
 }
-
