@@ -1,6 +1,6 @@
 {
   "name": "poca",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Execute scripts from a remote server on a local machine.",
   "main": "app/index.js",
   "bin": {
